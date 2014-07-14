@@ -9,41 +9,43 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table" style="border:1px black solid;width:100%;">
     <tr>
-        <th>
+        <th style="border:1px black solid;width:20%;vertical-align:middle;text-align:center;background-color:#094eae;color:#FFFFFF;">
             @Html.DisplayNameFor(model => model.Nome)
         </th>
-        <th>
+        <th style="border:1px black solid;width:40%;vertical-align:middle;text-align:center;background-color:#094eae;color:#FFFFFF;">
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Preco)
-        </th>
-        <th>
+        <th style="border:1px black solid;width:20%;vertical-align:middle;text-align:center;background-color:#094eae;color:#FFFFFF;">
             @Html.DisplayNameFor(model => model.Categoria)
         </th>
-        <th></th>
+        <th style="border:1px black solid;width:10%;vertical-align:middle;text-align:center;background-color:#094eae;color:#FFFFFF;">
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th style="border:1px black solid;width:10%;vertical-align:middle;text-align:center;background-color:#094eae;color:#FFFFFF;">
+            Ações
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="border:1px black solid;width:20%;vertical-align:middle;">
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
-        <td>
+        <td style="border:1px black solid;width:40%;vertical-align:middle;">
             @Html.DisplayFor(modelItem => item.Descricao)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preco)
-        </td>
-        <td>
+        <td style="border:1px black solid;width:20%;vertical-align:middle;text-align:center;">
             @Html.DisplayFor(modelItem => item.Categoria)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProdutoId })
+        <td style="border:1px black solid;width:10%;vertical-align:middle;text-align:right;">
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+        <td style="border:1px black solid;width:10%;vertical-align:middle;text-align:center;background-color:#b7cce6">
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProdutoId })  <br/>
+            @Html.ActionLink("Details", "Details", new { id = item.ProdutoId }) <br />
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProdutoId })
         </td>
     </tr>
 }
