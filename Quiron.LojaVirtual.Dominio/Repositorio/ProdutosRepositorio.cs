@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Quiron.LojaVirtual.Dominio.Entidade;
 namespace Quiron.LojaVirtual.Dominio.Repositorio
 {
-    class ProdutosRepositorio
+    public class ProdutosRepositorio
     {
         private readonly EfDbContext _context = new EfDbContext();
         public IEnumerable<Produto> Produtos
